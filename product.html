@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>胶胶者建材 - 产品中心</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 语言切换按钮 -->
+    <div class="lang-box">
+        <button class="lang-btn" onclick="switchLang()" data-lang="langBtn">
+            <span class="zh"></span>
+            <span class="en"></span>
+        </button>
+    </div>
+
+    <!-- 顶部导航 -->
+    <header class="header">
+        <div class="container">
+            <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <!-- 核心导航：首页 + 产品中心（移动端始终可见）-->
+            <div class="nav-core">
+                <a href="index.html" data-lang="nav.home">
+                    <span class="zh"></span>
+                    <span class="en"></span>
+                </a>
+                <span class="nav-core-sep"></span>
+                <a href="product.html" class="nav-active" data-lang="nav.product">
+                    <span class="zh"></span>
+                    <span class="en"></span>
+                </a>
+            </div>
+            <!-- 完整下拉菜单（移动端）/ 全宽导航（桌面端）-->
+            <nav class="nav" id="mainNav">
+                <a href="index.html" data-lang="nav.home">
+                    <span class="zh"></span>
+                    <span class="en"></span>
+                </a>
+                <a href="index.html#scenarios" data-lang="nav.scenarios">
+                    <span class="zh"></span>
+                    <span class="en"></span>
+                </a>
+                <a href="index.html#advantage" data-lang="nav.advantage">
+                    <span class="zh"></span>
+                    <span class="en"></span>
+                </a>
+                <a href="index.html#factory" data-lang="nav.factory">
+                    <span class="zh"></span>
+                    <span class="en"></span>
+                </a>
+                <a href="index.html#contact" data-lang="nav.contact">
+                    <span class="zh"></span>
+                    <span class="en"></span>
+                </a>
+                <a href="product.html" class="nav-active" data-lang="nav.product">
+                    <span class="zh"></span>
+                    <span class="en"></span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 页面顶部横幅 -->
+    <section class="page-banner" id="productTop">
+        <div class="page-banner-overlay"></div>
+        <div class="container page-banner-content">
+            <h1 data-lang="productPage.bannerTitle">
+                <span class="zh"></span>
+                <span class="en"></span>
+            </h1>
+            <p data-lang="productPage.bannerDesc">
+                <span class="zh"></span>
+                <span class="en"></span>
+            </p>
+        </div>
+    </section>
+
+    <!-- 产品中心主体 -->
+    <section class="section" style="padding-top: 60px;">
+        <div class="container">
+
+            <!-- 分类过滤标签 -->
+            <div class="product-filter">
+                <button class="filter-btn active" data-filter="all" data-lang="productPage.tagAll">
+                    <span class="zh"></span>
+                    <span class="en"></span>
+                </button>
+                <button class="filter-btn" data-filter="water" data-lang="productPage.tag1">
+                    <span class="zh"></span>
+                    <span class="en"></span>
+                </button>
+                <button class="filter-btn" data-filter="silicone" data-lang="productPage.tag2">
+                    <span class="zh"></span>
+                    <span class="en"></span>
+                </button>
+                <button class="filter-btn" data-filter="oil" data-lang="productPage.tag3">
+                    <span class="zh"></span>
+                    <span class="en"></span>
+                </button>
+            </div>
+
+            <!-- 产品列表 -->
+            <div class="product-list" id="productList">
+
+                <!-- 1. 胶胶者2000 水性密封胶 -->
+                <div class="product-card" data-type="water">
+                    <div class="product-img-wrap">
+                        <img src="images/product/JJZ-2000.png" alt="胶胶者2000">
+                        <span class="product-badge" data-lang="productPage.p1.badge">
+                            <span class="zh"></span>
+                            <span class="en"></span>
+                        </span>
+                    </div>
+                    <div class="product-info">
+                        <h3 data-lang="productPage.p1.title">
+                            <span class="zh"></span>
+                            <span class="en"></span>
+                        </h3>
+                        <p class="product-desc" data-lang="productPage.p1.desc">
+                            <span class="zh"></span>
+                            <span class="en"></span>
+                        </p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-label" data-lang-spec="specWarranty"></span>
+                                <span class="spec-value" data-lang-spec="p1.tag3"></span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label" data-lang-spec="specType"></span>
+                                <span class="spec-value" data-lang-spec="p1.tag1"></span>
+                            </div>
+                        </div>
+                        <div class="product-tags">
+                            <span data-lang-tag="p1.tag1"></span>
+                            <span data-lang-tag="p1.tag2"></span>
+                            <span data-lang-tag="p1.tag3"></span>
+                        </div>
+                        <button class="btn product-btn" data-product="jjz-2000" onclick="copyProductInfo(this)"></button>
+                    </div>
+                </div>
+
+                <!-- 2. 胶胶者1000 水性密封胶 -->
+                <div class="product-card" data-type="water">
+                    <div class="product-img-wrap">
+                        <img src="images/product/JJZ-1000.png" alt="胶胶者1000">
+                        <span class="product-badge" data-lang="productPage.p2.badge">
+                            <span class="zh"></span>
+                            <span class="en"></span>
+                        </span>
+                    </div>
+                    <div class="product-info">
+                        <h3 data-lang="productPage.p2.title">
+                            <span class="zh"></span>
+                            <span class="en"></span>
+                        </h3>
+                        <p class="product-desc" data-lang="productPage.p2.desc">
+                            <span class="zh"></span>
+                            <span class="en"></span>
+                        </p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-label" data-lang-spec="specWarranty"></span>
+                                <span class="spec-value" data-lang-spec="p2.tag3"></span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label" data-lang-spec="specType"></span>
+                                <span class="spec-value" data-lang-spec="p2.tag1"></span>
+                            </div>
+                        </div>
+                        <div class="product-tags">
+                            <span data-lang-tag="p2.tag1"></span>
+                            <span data-lang-tag="p2.tag2"></span>
+                            <span data-lang-tag="p2.tag3"></span>
+                        </div>
+                        <button class="btn product-btn" data-product="jjz-1000" onclick="copyProductInfo(this)"></button>
+                    </div>
+                </div>
+
+                <!-- 3. 胶胶者996 油性粘结胶 -->
+                <div class="product-card" data-type="oil">
+                    <div class="product-img-wrap">
+                        <img src="images/product/JJZ-996.png" alt="胶胶者996">
+                        <span class="product-badge" data-lang="productPage.p3.badge">
+                            <span class="zh"></span>
+                            <span class="en"></span>
+                        </span>
+                    </div>
+                    <div class="product-info">
+                        <h3 data-lang="productPage.p3.title">
+                            <span class="zh"></span>
+                            <span class="en"></span>
+                        </h3>
+                        <p class="product-desc" data-lang="productPage.p3.desc">
+                            <span class="zh"></span>
+                            <span class="en"></span>
+                        </p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-label" data-lang-spec="specType"></span>
+                                <span class="spec-value" data-lang-spec="p3.tag1"></span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label" data-lang-spec="specCure"></span>
+                                <span class="spec-value" data-lang-spec="fastCure"></span>
+                            </div>
+                        </div>
+                        <div class="product-tags">
+                            <span data-lang-tag="p3.tag1"></span>
+                            <span data-lang-tag="p3.tag2"></span>
+                        </div>
+                        <button class="btn product-btn" data-product="jjz-996" onclick="copyProductInfo(this)"></button>
+                    </div>
+                </div>
+
+                <!-- 4. 胶胶者998 门窗专用胶 -->
+                <div class="product-card" data-type="silicone">
+                    <div class="product-img-wrap">
+                        <img src="images/product/JJZ-998.png" alt="胶胶者998">
+                        <span class="product-badge" data-lang="productPage.p4.badge">
+                            <span class="zh"></span>
+                            <span class="en"></span>
+                        </span>
+                    </div>
+                    <div class="product-info">
+                        <h3 data-lang="productPage.p4.title">
+                            <span class="zh"></span>
+                            <span class="en"></span>
+                        </h3>
+                        <p class="product-desc" data-lang="productPage.p4.desc">
+                            <span class="zh"></span>
+                            <span class="en"></span>
+                        </p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-label" data-lang-spec="specWarranty"></span>
+                                <span class="spec-value" data-lang-spec="p4.tag3"></span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label" data-lang-spec="specType"></span>
+                                <span class="spec-value" data-lang-spec="p4.tag1"></span>
+                            </div>
+                        </div>
+                        <div class="product-tags">
+                            <span data-lang-tag="p4.tag1"></span>
+                            <span data-lang-tag="p4.tag2"></span>
+                            <span data-lang-tag="p4.tag3"></span>
+                        </div>
+                        <button class="btn product-btn" data-product="jjz-998" onclick="copyProductInfo(this)"></button>
+                    </div>
+                </div>
+
+                <!-- 5. 胶胶者999 高级耐候密封胶 -->
+                <div class="product-card" data-type="silicone">
+                    <div class="product-img-wrap">
+                        <img src="images/product/JJZ-999.png" alt="胶胶者999">
+                        <span class="product-badge" data-lang="productPage.p5.badge">
+                            <span class="zh"></span>
+                            <span class="en"></span>
+                        </span>
+                    </div>
+                    <div class="product-info">
+                        <h3 data-lang="productPage.p5.title">
+                            <span class="zh"></span>
+                            <span class="en"></span>
+                        </h3>
+                        <p class="product-desc" data-lang="productPage.p5.desc">
+                            <span class="zh"></span>
+                            <span class="en"></span>
+                        </p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-label" data-lang-spec="specWarranty"></span>
+                                <span class="spec-value" data-lang-spec="p5.tag3"></span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label" data-lang-spec="specType"></span>
+                                <span class="spec-value" data-lang-spec="p5.tag1"></span>
+                            </div>
+                        </div>
+                        <div class="product-tags">
+                            <span data-lang-tag="p5.tag1"></span>
+                            <span data-lang-tag="p5.tag2"></span>
+                            <span data-lang-tag="p5.tag3"></span>
+                        </div>
+                        <button class="btn product-btn" data-product="jjz-999" onclick="copyProductInfo(this)"></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 CTA 引导区块 -->
+    <section class="product-cta">
+        <div class="container" style="text-align:center;">
+            <h2 class="section-title" data-lang="productPage.ctaTitle">
+                <span class="zh"></span>
+                <span class="en"></span>
+            </h2>
+            <p class="product-cta-desc" data-lang="productPage.ctaDesc">
+                <span class="zh"></span>
+                <span class="en"></span>
+            </p>
+            <a href="index.html#contact" class="btn" data-lang="productPage.ctaBtn">
+                <span class="zh"></span>
+                <span class="en"></span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 底部版权 -->
+    <footer class="footer">
+        <div class="container">
+            <p>
+                &copy; <span id="copyYear"></span>
+                <span data-lang="footer.copyright">
+                    <span class="zh"></span>
+                    <span class="en"></span>
+                </span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JS引入顺序：配置 → 文案 → 逻辑（含版权年份和语言同步）-->
+    <script src="js/config.js"></script>
+    <script src="js/langData.js"></script>
+    <script src="js/lang.js"></script>
+</body>
+</html>
