@@ -198,7 +198,7 @@ const langText = {
 
     // --- 底部版权 ---
     footer: {
-        copyright: { zh: "胶胶者建材 版权所有", en: "JiaoJiaoZhe Building Materials All Rights Reserved" }
+        copyright: { zh: "胶胶者建材 版权所有（仅供测试学习使用）", en: "JiaoJiaoZhe Building Materials All Rights Reserved" }
     },
 
     // --- 语言切换 ---
