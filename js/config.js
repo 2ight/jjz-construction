@@ -9,7 +9,7 @@ const siteConfig = {
     email: "service@example.com",
     // 底部版权
     copyrightYear: "2026",
-    copyrightText: "版权所有",
+    copyrightText: "版权所有（仅供测试学习使用）",
     // 可选：备案号
     icp: ""
 };
